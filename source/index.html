@@ -120,8 +120,61 @@
 
 
   </main>
-  <footer class="footer">
-
+  <footer class="footer" data-test="footer">
+    <div class="footer__container page-wrapper">
+      <a class="footer__logo logo" href="#">
+        <img src="/__spritemap#sprite-logo-view" alt="Логотип." width="30" height="30">
+      </a>
+      <nav class="footer__navigation">
+        <ul class="footer__navigation-list">
+          <li class="footer__navigation-item">
+            <a class="footer__navigation-link" href="#">О проекте</a>
+          </li>
+          <li class="footer__navigation-item">
+            <a class="footer__navigation-link" href="#">Программы</a>
+          </li>
+          <li class="footer__navigation-item">
+            <a class="footer__navigation-link" href="#">Как поехать</a>
+          </li>
+          <li class="footer__navigation-item">
+            <a class="footer__navigation-link" href="#">Отзывы</a>
+          </li>
+          <li class="footer__navigation-item">
+            <a class="footer__navigation-link" href="#">Новости</a>
+          </li>
+          <li class="footer__navigation-item">
+            <a class="footer__navigation-link" href="#">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="footer__wrapper">
+        <a class="footer__politics" href="#">Политика конфиденциальности</a>
+        <span class="footer__copyright">Стажировка © 2023 Все права защищены</span>
+      </div>
+      <ul class="footer__socials">
+        <li class="footer__socials-item">
+          <a class="footer__socials-link" href="#" target="_blank" rel="noreferrer noopener">
+            <svg width="12" height="8" aria-hidden="true" focusable="false">
+              <use href="/__spritemap#sprite-vkontakte"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="footer__socials-item">
+          <a class="footer__socials-link" href="#" target="_blank" rel="noreferrer noopener">
+            <svg width="8" height="12" aria-hidden="true" focusable="false">
+              <use href="/__spritemap#sprite-odnoklassniki"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="footer__socials-item">
+          <a class="footer__socials-link" href="#" target="_blank" rel="noreferrer noopener">
+            <svg width="12" height="12" aria-hidden="true" focusable="false">
+              <use href="/__spritemap#sprite-reddit"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div>
   </footer>
 
     <!-- пример использования спрайта -->
@@ -135,9 +188,7 @@
     <div data-test="news">news</div>
     <div data-test="FAQ">FAQ</div>
     <div data-test="reviews">reviews</div>
-    <div data-test="contacts">contacts</div>
     <div data-test="form">form</div>
-    <div data-test="footer">footer</div>
     <script type="module" src="js/main.js"></script>
   </body>
 
