@@ -1,0 +1,135 @@
+.field {
+  display: flex;
+  cursor: pointer;
+
+  &--default {
+    gap: 12px;
+    flex-direction: column;
+  }
+
+  &--checkbox {
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+  }
+
+  &:hover .field__mark {
+    border-color: $color-white;
+  }
+}
+
+.field__description {
+  &--light {
+    color: rgba($color-text-secondary, 0.8);
+  }
+
+  &--default {
+    font-size: 12px;
+    line-height: 14px;
+
+    @include tablet {
+      font-size: 14px;
+      line-height: 20px;
+    }
+
+    @include desktop {
+      line-height: 18px;
+    }
+  }
+
+  &--checkbox {
+    font-size: 12px;
+    line-height: 14px;
+
+    @include tablet {
+      line-height: 12px;
+    }
+  }
+
+  &--dropdown {
+    @include desktop {
+      line-height: 14px;
+    }
+  }
+}
+
+.field__description-break {
+  @include tablet {
+    display: none;
+  }
+}
+
+.field__input {
+  padding: 0 19px;
+  height: 50px;
+  vertical-align: center;
+  border-radius: 8px;
+  background-color: transparent;
+  font-size: 14px;
+  line-height: 14px;
+  transition: border-color 0.3s ease;
+
+  &:focus-within {
+    outline: none;
+  }
+
+  &--light {
+    color: $color-text-secondary;
+    border: 1px solid rgba($color-white, 0.3);
+
+    &:hover,
+    &:focus-within,
+    &:active {
+      border-color: $color-white;
+    }
+  }
+
+  &--textarea {
+    resize: none;
+    padding: 19px;
+    height: 94px;
+
+    @include tablet {
+      height: 88px;
+    }
+
+    @include desktop {
+      height: 90px;
+    }
+  }
+}
+
+.field__dropdown {
+  width: 260px;
+
+  @include tablet {
+    width: auto;
+  }
+}
+
+.field__mark {
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  border: 1px solid rgba($color-white, 0.7);
+  border-radius: 2px;
+  transition: border-color 0.3s ease;
+
+  &--checkbox {
+    &::before {
+      content: "";
+      display: block;
+      width: 10px;
+      height: 10px;
+    }
+  }
+}
+
+.field__input-checkbox:checked + .field__mark--checkbox::before {
+  mask-image: url("/__spritemap#sprite-tick-view");
+  mask-repeat: no-repeat;
+  background-color: $color-white;
+}

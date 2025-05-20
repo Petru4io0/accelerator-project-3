@@ -1,5 +1,58 @@
 .button {
   text-decoration: none;
+  cursor: pointer;
+
+  &--light {
+    color: $color-text-additional;
+    border: 1px solid $color-text-additional;
+
+    &::after {
+      background-color: $color-text-additional;
+    }
+
+    &::before {
+      background-color: $color-white;
+    }
+
+    &:hover {
+      color: $color-white;
+      background-color: $color-text-additional;
+
+      &::after {
+        background-color: $color-white;
+      }
+
+      &::before {
+        background-color: $color-text-additional;
+      }
+    }
+  }
+
+  &--blue {
+    color: $color-white;
+    border: 1px solid $color-white;
+
+    &::after {
+      background-color: $color-white;
+    }
+
+    &::before {
+      background-color: $color-text-additional;
+    }
+
+    &:hover {
+      color: $color-text-additional;
+      background-color: $color-white;
+
+      &::after {
+        background-color: $color-text-additional;
+      }
+
+      &::before {
+        background-color: $color-white;
+      }
+    }
+  }
 
   &--primary {
     position: relative;
@@ -9,14 +62,12 @@
     font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 0.24px;
-    color: $color-text-additional;
     background-color: transparent;
-    border: 1px solid $color-text-additional;
     border-radius: 30px;
     transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
 
     &::after {
-      content: '';
+      content: "";
       position: absolute;
       top: 50%;
       right: 4px;
@@ -24,12 +75,11 @@
       width: 34px;
       height: 34px;
       border-radius: 50%;
-      background-color: $color-text-additional;
       transition: background-color 0.3s ease-in-out;
     }
 
     &::before {
-      content: '';
+      content: "";
       position: absolute;
       top: 50%;
       right: 16px;
@@ -38,7 +88,6 @@
       height: 10px;
       border-radius: 50%;
       mask-image: url("/__spritemap#sprite-arrow-right-view");
-      background-color: $color-white;
       z-index: 10;
       transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
     }
@@ -60,15 +109,7 @@
     }
 
     &:hover {
-      color: $color-white;
-      background-color: $color-text-additional;
-
-      &::after {
-        background-color: $color-white;
-      }
-
       &::before {
-        background-color: $color-text-additional;
         transform: translateY(-50%) rotate(45deg);
       }
     }

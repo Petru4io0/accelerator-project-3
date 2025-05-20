@@ -41,6 +41,7 @@
 
 .footer__navigation-list {
   @include reset-list;
+
   display: flex;
   flex-wrap: wrap;
   gap: 20px 30px;
@@ -90,7 +91,7 @@
   align-items: center;
   gap: 13px;
 
-  @include tablet{
+  @include tablet {
     align-items: flex-start;
   }
 
@@ -153,6 +154,7 @@
 
 .footer__socials {
   @include reset-list;
+
   display: flex;
   flex-wrap: wrap;
   gap: 10px;

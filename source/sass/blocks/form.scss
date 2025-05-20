@@ -1,0 +1,131 @@
+.form {
+  background-color: $color-background-primary;
+  background-image:
+    image-set(
+      url("../../img/form/mobile/city@1x.webp") 1x,
+      url("../../img/form/mobile/city@2x.webp") 2x,
+      url("../../img/form/mobile/city@1x.jpg") 1x,
+      url("../../img/form/mobile/city@2x.jpg") 2x
+    );
+  background-repeat: no-repeat;
+  background-position: top 40px center;
+  background-size: 100% 753px;
+
+  @include tablet {
+    background-image:
+      image-set(
+        url("../../img/form/tablet/city@1x.webp") 1x,
+        url("../../img/form/tablet/city@2x.webp") 2x,
+        url("../../img/form/tablet/city@1x.png") 1x,
+        url("../../img/form/tablet/city@2x.png") 2x
+      );
+    background-size: 652px 780px;
+    background-position: top 50px center;
+  }
+
+  @include desktop {
+    background-image:
+      image-set(
+        url("../../img/form/desktop/city@1x.webp") 1x,
+        url("../../img/form/desktop/city@2x.webp") 2x,
+        url("../../img/form/desktop/city@1x.png") 1x,
+        url("../../img/form/desktop/city@2x.png") 2x
+      );
+    background-size: 1240px 800px;
+    background-position: top 60px center;
+  }
+}
+
+.form__container {
+  padding: 83px 10px 80px;
+
+  @include tablet {
+    padding: 50px 268px 50px 58px;
+  }
+
+  @include desktop {
+    padding: 60px 850px 60px 100px;
+  }
+}
+
+.form__content {
+  padding: 15px 15px 27px;
+  background-color: $color-text-additional;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  @include tablet {
+    padding: 41px 40px 36px;
+    gap: 40px;
+  }
+
+  @include desktop {
+    padding: 44px 70px 40px;
+  }
+}
+
+.form__header {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  @include tablet {
+    gap: 31px;
+  }
+
+  @include desktop {
+    gap: 34px;
+  }
+}
+
+.form__title {
+  margin: 0;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  color: $color-white;
+
+  @include tablet {
+    font-size: 28px;
+    line-height: 28px;
+  }
+
+  @include desktop {
+    font-size: 32px;
+    line-height: 36px;
+  }
+}
+
+.form__description {
+  margin: 0;
+  color: rgba($color-text-secondary, 0.9);
+
+  @include tablet {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  @include desktop {
+    line-height: 26px;
+  }
+}
+
+.form__form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form__button {
+  margin-right: 10px;
+
+  @include tablet {
+    margin-top: 20px;
+  }
+
+  @include desktop {
+    margin-right: 0;
+  }
+}

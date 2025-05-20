@@ -10,9 +10,14 @@
 
   <body class="page-body">
   <header class="header">
-
+    <div data-test="hero">hero</div>
+    <div data-test="programs">programs</div>
+    <div data-test="news">news</div>
+    <div data-test="FAQ">FAQ</div>
+    <div data-test="reviews">reviews</div>
   </header>
   <main class="main">
+    <h1 class="visually-hidden">Сайт с поиском стажировок для студентов.</h1>
     <section class="about" data-test="about">
       <div class="about__container page-wrapper">
         <div class="about__wrapper">
@@ -27,7 +32,7 @@
               стадиях карьеры, предоставляя им&nbsp;инструменты для решения сложных проблем, с&nbsp;которыми сталкиваются в мире.
               Цель центра — наделить этих людей способностью инициировать значимые изменения.
             </p>
-            <a href="#" class="about__link button button--primary">подробнее о проекте</a>
+            <a class="about__link button button--primary button--light" href="#">подробнее о проекте</a>
           </div>
         </div>
         <ul class="about__advantages-list">
@@ -118,6 +123,50 @@
       </div>
     </section>
 
+    <section class="form" data-test="form">
+      <div class="form__container page-wrapper">
+        <div class="form__content">
+          <div class="form__header">
+            <h2 class="form__title">Напишите нам</h2>
+            <p class="form__description">
+              Оставьте ваши контакты, если у вас
+              остались вопросы — мы на них ответим!
+            </p>
+          </div>
+          <form class="form__form" action="#" method="post">
+            <label class="form__field field field--default">
+              <span class="field__description field__description--light field__description--default">Имя</span>
+              <input class="field__input field__input--light" type="text" name="name">
+            </label>
+            <label class="form__field field field--default">
+              <span class="field__description field__description--light field__description--default">Телефон</span>
+              <input class="field__input field__input--light" type="text" name="phone">
+            </label>
+            <label class="form__field field field--default">
+              <span class="field__description field__description--light field__description--default">Ваше сообщение</span>
+              <textarea class="field__input field__input--light field__input--textarea" name="message"></textarea>
+            </label>
+            <div class="form__field field field--default">
+              <span class="field__description field__description--light field__description--default field__description--dropdown">Выберите город</span>
+              <div class="field__dropdown dropdown" tabindex="0">
+                <div class="dropdown__toggle dropdown__toggle--light"></div>
+                <ul class="dropdown__menu dropdown__menu--light">
+                  <li class="dropdown__menu-item" data-value=""></li>
+                  <li class="dropdown__menu-item" data-value="Saint-Petersburg">Санкт-Петербург</li>
+                  <li class="dropdown__menu-item" data-value="Moscow">Москва</li>
+                </ul>
+              </div>
+            </div>
+            <label class="form__field field field--checkbox">
+              <input class="field__input-checkbox visually-hidden" type="checkbox" name="personal-data" value="agree">
+              <span class="field__mark field__mark--checkbox"></span>
+              <span class="field__description field__description--light field__description--checkbox">Я согласен на обработку моих персональных <br class="field__description-break"> данных</span>
+            </label>
+            <button class="form__button button button--primary button--blue" type="submit">отправить</button>
+          </form>
+        </div>
+      </div>
+    </section>
 
   </main>
   <footer class="footer" data-test="footer">
@@ -153,21 +202,21 @@
       </div>
       <ul class="footer__socials">
         <li class="footer__socials-item">
-          <a class="footer__socials-link" href="#" target="_blank" rel="noreferrer noopener">
+          <a class="footer__socials-link" href="#" target="_blank" rel="noreferrer noopener" aria-label="Перейти на нашу страницу во Вконтакте.">
             <svg width="12" height="8" aria-hidden="true" focusable="false">
               <use href="/__spritemap#sprite-vkontakte"></use>
             </svg>
           </a>
         </li>
         <li class="footer__socials-item">
-          <a class="footer__socials-link" href="#" target="_blank" rel="noreferrer noopener">
+          <a class="footer__socials-link" href="#" target="_blank" rel="noreferrer noopener" aria-label="Перейти на нашу страницу в Одноклассниках.">
             <svg width="8" height="12" aria-hidden="true" focusable="false">
               <use href="/__spritemap#sprite-odnoklassniki"></use>
             </svg>
           </a>
         </li>
         <li class="footer__socials-item">
-          <a class="footer__socials-link" href="#" target="_blank" rel="noreferrer noopener">
+          <a class="footer__socials-link" href="#" target="_blank" rel="noreferrer noopener" aria-label="Перейти на нашу страницу на Reddit.">
             <svg width="12" height="12" aria-hidden="true" focusable="false">
               <use href="/__spritemap#sprite-reddit"></use>
             </svg>
@@ -177,19 +226,6 @@
     </div>
   </footer>
 
-    <!-- пример использования спрайта -->
-<!--    <img src="/__spritemap#sprite-logo-view" alt="Это спрайт">-->
-<!--    <svg>-->
-<!--      <use href="/__spritemap#sprite-user"></use>-->
-<!--    </svg>-->
-    <!-- примеры требуемых атрибутов data-test="*" -->
-    <div data-test="hero">hero</div>
-    <div data-test="programs">programs</div>
-    <div data-test="news">news</div>
-    <div data-test="FAQ">FAQ</div>
-    <div data-test="reviews">reviews</div>
-    <div data-test="form">form</div>
-    <script type="module" src="js/main.js"></script>
+  <script type="module" src="js/main.js"></script>
   </body>
-
 </html>
