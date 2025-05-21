@@ -1,0 +1,75 @@
+// ОБЩИЕ СТИЛИ ДЛЯ СЛАЙДЕРА
+
+.slider {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.slider__wrapper {
+  display: flex;
+  transition-property: transform;
+  transition-timing-function: var(--swiper-wrapper-transition-timing-function, initial);
+}
+
+.slider__slide {
+  flex-shrink: 0;
+  transition-property: transform;
+}
+
+.slider-android .slider__slide,
+.slider-ios .slider__slide,
+.slider__list {
+  transform: translate3d(0, 0, 0);
+}
+
+.slider-horizontal {
+  touch-action: pan-y;
+}
+
+.slider__slide-invisible-blank {
+  visibility: hidden;
+}
+
+.slider-hidden .slider__slide {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+.slider__scrollbar-cursor-drag {
+  cursor: move;
+}
+
+.slider__scrollbar-lock {
+  display: none;
+}
+
+.slider__scrollbar {
+  position: relative;
+  touch-action: none;
+  background-color: rgba($color-text-additional, 0.2);
+}
+
+.slider__scrollbar-disabled > .slider__scrollbar,
+.slider__scrollbar.slider__scrollbar-disabled {
+  display: none!important
+}
+
+.slider-horizontal > .slider__scrollbar,
+.slider__scrollbar.swiper-scrollbar-horizontal {
+  position: absolute;
+  left: 45px;
+  bottom: 60px;
+  z-index: 50;
+  height: 2px;
+  width: 562px;
+}
+
+.swiper-scrollbar-drag {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  background-color: $color-text-additional;
+  left: 0;
+  top: 0
+}

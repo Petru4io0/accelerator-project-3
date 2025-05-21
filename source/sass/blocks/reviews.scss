@@ -1,0 +1,58 @@
+.reviews {
+  background-color: $color-background-primary;
+}
+
+.reviews__container {
+  position: relative;
+  padding: 55px 15px 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+
+  @include tablet {
+    padding: 50px 45px 112px;
+    gap: 40px;
+  }
+
+  @include desktop {
+    padding: 65px 100px 122px;
+    gap: 45px;
+  }
+}
+
+.reviews__title {
+  padding-right: 70px;
+
+  @include desktop {
+    padding-left: 3px;
+  }
+}
+
+.reviews__list {
+  @include reset-list;
+}
+
+.reviews__buttons {
+  position: absolute;
+  top: 54px;
+  right: 15px;
+
+  @include tablet {
+    right: 45px;
+    bottom: 50px;
+    top: auto;
+  }
+
+  @include desktop {
+    right: 100px;
+    bottom: 60px;
+  }
+}
+
+.reviews__scrollbar {
+  visibility: hidden;
+
+  @include tablet {
+    visibility: visible;
+  }
+}

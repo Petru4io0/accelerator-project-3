@@ -4,3 +4,4 @@
 // import 'swiper/css';
 
 import './dropdown.js';
+import './slider.js';
