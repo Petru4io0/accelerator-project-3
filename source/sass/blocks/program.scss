@@ -1,0 +1,185 @@
+.program {
+  background-repeat: no-repeat;
+  border-radius: 12px;
+
+  &--intership {
+    background-image:
+      image-set(
+          url("../../img/programs/intership/mobile/photo@1x.webp") 1x,
+          url("../../img/programs/intership/mobile/photo@2x.webp") 2x,
+          url("../../img/programs/intership/mobile/photo@1x.png") 1x,
+          url("../../img/programs/intership/mobile/photo@2x.png") 2x
+      );
+
+    @include tablet {
+      background-image:
+        image-set(
+            url("../../img/programs/intership/tablet/photo@1x.webp") 1x,
+            url("../../img/programs/intership/tablet/photo@2x.webp") 2x,
+            url("../../img/programs/intership/tablet/photo@1x.png") 1x,
+            url("../../img/programs/intership/tablet/photo@2x.png") 2x
+        );
+    }
+
+    @include desktop {
+      background-image:
+        image-set(
+            url("../../img/programs/intership/desktop/photo@1x.webp") 1x,
+            url("../../img/programs/intership/desktop/photo@2x.webp") 2x,
+            url("../../img/programs/intership/desktop/photo@1x.png") 1x,
+            url("../../img/programs/intership/desktop/photo@2x.png") 2x
+        );
+    }
+  }
+
+  &--volunteering {
+    background-image:
+      image-set(
+          url("../../img/programs/volunteering/mobile/photo@1x.webp") 1x,
+          url("../../img/programs/volunteering/mobile/photo@2x.webp") 2x,
+          url("../../img/programs/volunteering/mobile/photo@1x.png") 1x,
+          url("../../img/programs/volunteering/mobile/photo@2x.png") 2x
+      );
+
+    @include tablet {
+      background-image:
+        image-set(
+            url("../../img/programs/volunteering/tablet/photo@1x.webp") 1x,
+            url("../../img/programs/volunteering/tablet/photo@2x.webp") 2x,
+            url("../../img/programs/volunteering/tablet/photo@1x.png") 1x,
+            url("../../img/programs/volunteering/tablet/photo@2x.png") 2x
+        );
+    }
+
+    @include desktop {
+      background-image:
+        image-set(
+            url("../../img/programs/volunteering/desktop/photo@1x.webp") 1x,
+            url("../../img/programs/volunteering/desktop/photo@2x.webp") 2x,
+            url("../../img/programs/volunteering/desktop/photo@1x.png") 1x,
+            url("../../img/programs/volunteering/desktop/photo@2x.png") 2x
+        );
+    }
+  }
+
+  &--learning {
+    background-image:
+      image-set(
+          url("../../img/programs/learning/mobile/photo@1x.webp") 1x,
+          url("../../img/programs/learning/mobile/photo@2x.webp") 2x,
+          url("../../img/programs/learning/mobile/photo@1x.png") 1x,
+          url("../../img/programs/learning/mobile/photo@2x.png") 2x
+      );
+
+    @include tablet {
+      background-image:
+        image-set(
+            url("../../img/programs/learning/tablet/photo@1x.webp") 1x,
+            url("../../img/programs/learning/tablet/photo@2x.webp") 2x,
+            url("../../img/programs/learning/tablet/photo@1x.png") 1x,
+            url("../../img/programs/learning/tablet/photo@2x.png") 2x
+        );
+    }
+
+    @include desktop {
+      background-image:
+        image-set(
+            url("../../img/programs/learning/desktop/photo@1x.webp") 1x,
+            url("../../img/programs/learning/desktop/photo@2x.webp") 2x,
+            url("../../img/programs/learning/desktop/photo@1x.png") 1x,
+            url("../../img/programs/learning/desktop/photo@2x.png") 2x
+        );
+    }
+  }
+}
+
+.program__wrapper {
+  height: 100%;
+  padding: 271px 10px 18px;
+  background-color: rgba($color-text-additional, 0.2);
+  border-radius: 12px;
+
+  @include tablet {
+    padding: 285px 20px 10px;
+  }
+
+  @include desktop {
+    padding: 280px 51px 17px 20px;
+  }
+}
+
+.program__container {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  background-color: $color-white;
+  padding: 18px 18px 15px;
+  border-radius: 12px;
+  --nb-w: 85px;
+  --nb-h: 2px;
+
+  @include tablet {
+    --nb-w: 72px;
+    --nb-h: -2px;
+  }
+
+  @include desktop {
+    gap: 19px;
+    --nb-w: 88px;
+    --nb-h: 1px;
+    height: 100%;
+  }
+}
+
+.program__content {
+  display: flex;
+  align-items: center;
+  gap: 29px;
+
+  @include tablet {
+    gap: 16px;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+}
+
+.program__title {
+  margin: 0;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 400;
+  color: $color-text-additional;
+  max-width: 120px;
+
+  @include tablet {
+    font-size: 20px;
+    line-height: 14px;
+  }
+
+  @include desktop {
+    font-size: 24px;
+    line-height: 17px;
+    max-width: 180px;
+  }
+}
+
+.program__text-wrapper {
+  p {
+    margin: 0;
+    font-size: 12px;
+    line-height: 14px;
+
+    @include tablet {
+      font-size: 14px;
+      line-height: 20px;
+    }
+
+    @include desktop {
+      line-height: 18px;
+    }
+  }
+}
+
+.program__link {
+  flex-shrink: 0;
+}

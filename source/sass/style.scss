@@ -2,6 +2,7 @@
 
 // vendor
 @import "./vendor/normalize";
+@import "./vendor/nebo";
 
 // base
 @import "./base/fonts";
@@ -20,6 +21,8 @@
 @import "./blocks/logo";
 @import "./blocks/about";
 @import "./blocks/grant";
+@import "./blocks/programs";
+@import "./blocks/program";
 @import "./blocks/reviews";
 @import "./blocks/review";
 @import "./blocks/contacts";

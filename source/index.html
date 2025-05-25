@@ -11,10 +11,8 @@
   <body class="page-body">
   <header class="header">
     <div data-test="hero">hero</div>
-    <div data-test="programs">programs</div>
     <div data-test="news">news</div>
     <div data-test="FAQ">FAQ</div>
-    <div data-test="reviews">reviews</div>
   </header>
   <main class="main">
     <h1 class="visually-hidden">Сайт с поиском стажировок для студентов.</h1>
@@ -28,7 +26,7 @@
           <div class="about__wrapper-content">
             <h3>Наша цель</h3>
             <p>
-              Наша деятельность направлена на&nbsp;повышение квалификации молодых специалистов на ранних и средних
+              Наша деятельность направлена на&повышение квалификации молодых специалистов на ранних и средних
               стадиях карьеры, предоставляя им&nbsp;инструменты для решения сложных проблем, с&nbsp;которыми сталкиваются в мире.
               Цель центра — наделить этих людей способностью инициировать значимые изменения.
             </p>
@@ -53,6 +51,59 @@
             <p>грант всем участникам для&nbsp;комфортного прохождения программы</p>
           </li>
         </ul>
+      </div>
+    </section>
+
+    <section class="programs" data-test="programs">
+      <div class="programs__container page-wrapper slider">
+        <h2 class="programs__title title title--section title--primary">Программы</h2>
+        <ul class="programs__list slider__wrapper">
+          <li class="programs__item program program--intership slider__slide">
+            <div class="program__wrapper">
+              <div class="program__container nebo nebo--tr">
+                <h3 class="program__title">Стажировки</h3>
+                <div class="program__content">
+                  <div class="program__text-wrapper">
+                    <p>Получите незаменимый опыт работы в крупнейших мировых компаниях.</p>
+                  </div>
+                  <a class="program__link button button--secondary" href="#" aria-label="Перейти к стажировкам."></a>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="programs__item program program--volunteering slider__slide">
+            <div class="program__wrapper">
+              <div class="program__container nebo nebo--tr">
+                <h3 class="program__title">Волонтёрство</h3>
+                <div class="program__content">
+                  <div class="program__text-wrapper">
+                    <p>Помогайте другим и&nbsp;развивайте свои лидерские&nbsp;качества</p>
+                  </div>
+                  <a class="program__link button button--secondary" href="#" aria-label="Перейти к волонтёрству."></a>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="programs__item program program--learning slider__slide">
+            <div class="program__wrapper">
+              <div class="program__container nebo nebo--tr">
+                <h3 class="program__title">Учёба</h3>
+                <div class="program__content">
+                  <div class="program__text-wrapper">
+                    <p>Получите образование и измените своё будущее.</p>
+                  </div>
+                  <a class="program__link button button--secondary" href="#" aria-label="Перейти к учёбе."></a>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+        <a class="programs__link button button--primary button--light" href="#">все программы</a>
+        <div class="programs__buttons slider__buttons">
+          <button class="slider__buttons-item slider__buttons-item--prev programs__button programs__button--prev" type="button" aria-label="Предыдущий слайд."></button>
+          <button class="slider__buttons-item slider__buttons-item--next programs__button programs__button--next" type="button" aria-label="Следующий слайд."></button>
+        </div>
+        <div class="programs__scrollbar slider__scrollbar"></div>
       </div>
     </section>
 

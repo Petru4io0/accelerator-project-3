@@ -1,0 +1,74 @@
+.programs {
+  position: relative;
+  background-color: $color-background-primary;
+}
+
+.programs__title {
+  @include mobile-only {
+    margin-bottom: 5px;
+  }
+}
+
+.programs__container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 55px 15px 50px;
+
+  @include tablet {
+    padding: 53px 45px 112px;
+    gap: 43px;
+  }
+
+  @include desktop {
+    padding: 65px 100px 122px;
+    gap: 45px;
+  }
+}
+
+.programs__list {
+  @include reset-list;
+}
+
+.programs__buttons {
+  position: absolute;
+  top: 54px;
+  right: 15px;
+
+  @include tablet {
+    bottom: 50px;
+    right: 45px;
+    top: auto;
+  }
+
+  @include desktop {
+    bottom: 60px;
+    right: 100px;
+  }
+}
+
+.programs__link {
+  align-self: flex-start;
+  padding-left: 30px;
+  padding-right: 69px;
+
+  @include tablet {
+    position: absolute;
+    top: 50px;
+    right: 45px;
+    padding-right: 80px;
+  }
+
+  @include desktop {
+    top: 62px;
+    right: 100px;
+  }
+}
+
+.programs__scrollbar {
+  visibility: hidden;
+
+  @include tablet {
+    visibility: visible;
+  }
+}

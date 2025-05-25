@@ -35,3 +35,38 @@ const reviewSlider = new Swiper('.reviews__container', {
 });
 
 reviewSlider.init();
+
+const programSlider = new Swiper('.programs__container', {
+  modules: [Navigation, Scrollbar],
+  containerModifierClass: 'programs-',
+  eventsPrefix: 'programs-',
+  slideClass: 'programs__item',
+  slideActiveClass: 'programs__item--current',
+  wrapperClass: 'programs__list',
+  slideNextClass: 'programs__item--next',
+  slidePrevClass: 'programs__item--prev',
+  grabCursor: true,
+  navigation: {
+    nextEl: '.programs__button--next',
+    prevEl: '.programs__button--prev',
+  },
+  scrollbar: {
+    el: '.programs__scrollbar',
+  },
+  spaceBetween: 20,
+  breakpoints: {
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 30,
+    },
+
+    1440: {
+      slidesPerView: 3,
+      spaceBetween: 32,
+      allowTouchMove: false,
+      grabCursor: false,
+    }
+  },
+});
+
+programSlider.init();

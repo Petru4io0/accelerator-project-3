@@ -114,4 +114,59 @@
       }
     }
   }
+
+  &--secondary {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: $color-text-additional;
+    padding: 0;
+    border: none;
+    transition: background-color 0.3s ease;
+
+    &::before {
+      content: "";
+      width: 10px;
+      height: 10px;
+      mask-image: url("/__spritemap#sprite-arrow-right-view");
+      mask-repeat: no-repeat;
+      background-color: $color-white;
+      transition: transform 0.3s ease, background-color 0.3s ease;
+      transform: rotate(0deg);
+    }
+
+    &:hover {
+      background-color: $color-white;
+
+      &::before {
+        transform: rotate(45deg);
+        background-color: $color-text-additional;
+      }
+    }
+
+    &:active {
+      &::before {
+        background-color: rgba($color-text-additional, 0.7);
+      }
+    }
+
+    &:focus-visible {
+      outline: none;
+
+      &::before {
+        transform: rotate(45deg);
+      }
+    }
+
+    &:disabled {
+      background-color: $color-disabled;
+
+      &::before {
+        background-color: rgba($color-white, 0.6);
+      }
+    }
+  }
 }
