@@ -1,0 +1,28 @@
+.questions {
+  background-color: $color-background-primary;
+}
+
+.questions__container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 50px 15px;
+
+  @include tablet {
+    padding: 50px 45px;
+    gap: 40px;
+  }
+
+  @include desktop {
+    padding: 71px 206px 60px;
+    gap: 71px;
+  }
+}
+
+.questions__title {
+  text-align: center;
+}
+
+.questions__list {
+  @include reset-list;
+}

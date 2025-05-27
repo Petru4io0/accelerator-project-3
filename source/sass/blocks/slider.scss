@@ -52,7 +52,7 @@
 
 .slider__scrollbar-disabled > .slider__scrollbar,
 .slider__scrollbar.slider__scrollbar-disabled {
-  display: none!important
+  display: none;
 }
 
 .slider-horizontal > .slider__scrollbar,
@@ -71,5 +71,5 @@
   position: relative;
   background-color: $color-text-additional;
   left: 0;
-  top: 0
+  top: 0;
 }

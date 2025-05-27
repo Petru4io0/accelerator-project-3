@@ -1,0 +1,151 @@
+.accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+}
+
+.accordion__item {
+  border: 2px solid $color-text-additional;
+  border-radius: 14px;
+
+  @include tablet {
+    border-radius: 16px;
+  }
+}
+
+.accordion__item-title {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 20px 15px 20px 15px;
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 18px;
+  text-align: left;
+  border-radius: 10px 10px 0 0;
+  border: none;
+  color: $color-text-additional;
+  background-color: transparent;
+  transition: background-color 0.3s ease, color 0.3s ease;
+
+  &::after {
+    content: '';
+    flex-shrink: 0;
+    right: 15px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: $color-text-additional;
+    transition: background-color 0.3s ease;
+
+    @include tablet {
+      align-self: flex-start;
+    }
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 26px;
+    mask-image: url("/__spritemap#sprite-plus-view");
+    mask-repeat: no-repeat;
+    background-color: $color-white;
+    z-index: 10;
+    transition: background-color 0.3s ease, padding-bottom 0.3s ease;
+
+    @include tablet {
+      right: 41px;
+      top: 41px;
+      transform: none;
+    }
+
+    @include desktop {
+      right: 51px;
+      top: 51px;
+    }
+  }
+
+  @include tablet {
+    font-size: 22px;
+    line-height: 26px;
+    padding: 30px;
+    gap: 20px;
+  }
+
+  @include desktop {
+    padding: 40px;
+    font-size: 28px;
+    line-height: 34px;
+  }
+
+  &--active {
+    background-color: $color-text-additional;
+    color: $color-white;
+
+    &::after {
+      background-color: $color-white;
+    }
+
+    &::before {
+      mask-image: url("/__spritemap#sprite-minus-view");
+      background-color: $color-text-additional;
+    }
+
+    @include tablet {
+      padding-bottom: 20px;
+    }
+  }
+}
+
+.accordion__item-content {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  background-color: $color-text-additional;
+  color: $color-white;
+  border-radius: 0 0 10px 10px;
+  padding: 0 16px 0;
+  transition: opacity 0.3s ease, max-height 0.3s ease;
+
+  @include tablet {
+    padding: 0 30px 0;
+  }
+
+  @include desktop {
+    padding: 0 40px 0;
+  }
+
+  p {
+    margin: 0;
+
+    @include tablet {
+      font-size: 16px;
+    }
+
+    @include desktop {
+      font-size: 16px;
+      line-height: 26px;
+    }
+  }
+
+  &--visible {
+    padding-bottom: 20px;
+    max-height: 100%;
+    opacity: 1;
+
+    @include tablet {
+      padding-bottom: 30px;
+    }
+
+    @include desktop {
+      padding-bottom: 40px;
+    }
+  }
+}

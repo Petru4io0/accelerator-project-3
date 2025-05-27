@@ -5,3 +5,4 @@
 
 import './dropdown.js';
 import './slider.js';
+import './accordion.js';
